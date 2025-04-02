@@ -16,7 +16,6 @@ var (
 func SortAndPrint(mapContent map[int]string) int {
 	mapLength := len(mapContent)
 	sortedContent := make([]int, 0, mapLength)
-	fmt.Println(mapLength)
 	for k := range mapContent {
 		sortedContent = append(sortedContent, k)
 	}
@@ -25,7 +24,7 @@ func SortAndPrint(mapContent map[int]string) int {
 	for _, k := range sortedContent {
 		fmt.Printf("[%d]: %s\n", k, mapContent[k])
 	}
-	fmt.Printf("\nPress a number (1-%d) to choose a category:", mapLength)
+	fmt.Printf("\nPress a number (1-%d):", mapLength)
 	return mapLength
 
 }

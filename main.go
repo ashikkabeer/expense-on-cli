@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"time"
 
 	"github.com/ashikkabeer/expense-on-cli/models"
 	"github.com/ashikkabeer/expense-on-cli/utils"
@@ -16,6 +17,15 @@ func main() {
 	defer keyboard.Close()
 
 	// importing the models
+
+	now := time.Now()
+	year, month, day := now.Date()
+	date := fmt.Sprintf("%d-%s-%d", day, month, year)
+	fmt.Println()
+	fmt.Println("Date: ", date)
+	fmt.Println()
+
+
 	category := models.Category
 	paymentMethod := models.PaymentMethod
 	cashType := models.CashType
